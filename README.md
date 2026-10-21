@@ -72,6 +72,14 @@ $ freebuff --version
 
 ## Install
 
+### One-line install
+
+Installs the prerequisites and the latest release in one command:
+
+```bash
+pkg install -y ca-certificates coreutils curl dpkg git ripgrep termux-tools && curl -fsSL https://raw.githubusercontent.com/emonbudc/freebuff-bionic/main/install.sh | bash
+```
+
 ### Requirements
 
 - Termux installed from [F-Droid](https://f-droid.org/packages/com.termux/) or
