@@ -1,0 +1,6 @@
+.build/
+dist/
+out/
+*.deb
+*.deb.sha256
+node_modules/
