@@ -66,6 +66,12 @@ mkdir -p "$OUTDIR"
 DEB="$OUTDIR/freebuff_${VERSION}-${REVISION}_aarch64.deb"
 dpkg-deb --build --root-owner-group -Zxz "$ROOT" "$DEB" >/dev/null
 
+dpkg-deb -c "$DEB" > "$WORK/contents"
+grep -q '\./data/data/com.termux/files/usr/lib/freebuff/freebuff$' "$WORK/contents" || {
+  echo "error: package payload is not rooted under the Termux prefix" >&2
+  exit 1
+}
+
 (
   cd "$OUTDIR"
   sha256sum "$(basename "$DEB")" > "$(basename "$DEB").sha256"

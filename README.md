@@ -15,11 +15,11 @@ result as a Termux `.deb`.
 
 ## Install
 
-Requirements: Termux on Android aarch64, plus `curl`, `dpkg`, `git`, and
-`ripgrep`.
+Requirements: Termux on Android aarch64, plus `curl`, `dpkg`, `git`,
+`coreutils`, and `ripgrep`.
 
 ```bash
-pkg install curl git ripgrep
+pkg install coreutils curl git ripgrep
 curl -fsSL https://raw.githubusercontent.com/emonbudc/freebuff-bionic/main/install.sh | bash
 ```
 
